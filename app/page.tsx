@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Zap, TrendingDown, Target } from 'lucide-react';
+import { Search, Zap, TrendingDown, Target, Layout transition } from 'lucide-react';
 
 export default function NearixApp() {
   const [showSplash, setShowSplash] = useState(true);
@@ -47,15 +47,15 @@ export default function NearixApp() {
             <nav className="flex justify-between items-center mb-12">
               <div className="flex items-center gap-2">
                 <img src="/gem.png" className="w-8 h-8" alt="logo" />
-                <span className="text-xl font-bold tracking-tighter">NEARIX</span>
+                <span className="text-xl font-bold tracking-tighter italic">NEARIX</span>
               </div>
               <div className="w-10 h-10 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-                <Zap className="w-5 h-5 text-purple-400" />
+                <Zap className="w-5 h-5 text-purple-400 fill-purple-400" />
               </div>
             </nav>
 
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold leading-tight">
+              <h1 className="text-4xl font-bold leading-tight tracking-tighter">
                 Smart Deals <br />
                 <span className="text-purple-500 underline decoration-purple-500/30">Radar</span>
               </h1>
