@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // هذا السطر يحل مشكلة الخطوط والبيانات الخارجية نهائياً
+  /* This bypasses common build errors like ESLint, 
+     TypeScript issues, and font optimization failures.
+  */
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -9,7 +11,14 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-  }
+  },
+  // This line is the key to fixing the font error we saw in the logs
+  optimizeFonts: false,
+  
+  // Experimental features to ensure a smooth build on Vercel
+  experimental: {
+    optimizePackageImports: ['framer-motion'],
+  },
 };
 
 export default nextConfig;
