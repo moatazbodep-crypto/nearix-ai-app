@@ -13,7 +13,7 @@ export default function NearixApp() {
 
   return (
     <main style={{ backgroundColor: '#050505', minHeight: '100vh', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'sans-serif' }}>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {showSplash ? (
           <motion.div
             key="splash"
@@ -23,16 +23,17 @@ export default function NearixApp() {
             style={{ textAlign: 'center' }}
           >
             <h1 style={{ fontSize: '3rem', letterSpacing: '5px', color: '#a855f7' }}>NEARIX</h1>
-            <p style={{ color: '#666', letterSpacing: '2px' }}>INITIALIZING AI...</p>
+            <p style={{ color: '#666', letterSpacing: '2px' }}>AI SYSTEM STARTING...</p>
           </motion.div>
         ) : (
           <motion.div
             key="main"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            style={{ textAlign: 'center' }}
           >
-            <h2 style={{ color: '#fff' }}>Welcome to Nearix Dashboard</h2>
-            <p style={{ color: '#a855f7' }}>Global Intelligence Active</p>
+            <h2 style={{ fontSize: '2rem' }}>Welcome to Nearix</h2>
+            <p style={{ color: '#a855f7' }}>The Future of Global Deals</p>
           </motion.div>
         )}
       </AnimatePresence>
